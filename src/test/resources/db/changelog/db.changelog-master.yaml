@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: yoann
+      changes:
+        - createTable:
+            tableName: simple_entity
+            columns:
+              - column:
+                  name: id
+                  type: long
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: a_string
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: a_big_decimal
+                  type: decimal
+                  constraints:
+                    nullable: true
+              - column:
+                  name: a_float
+                  type: real
+                  constraints:
+                    nullable: true
+              - column:
+                  name: an_instant
+                  type: timestamp
+                  constraints:
+                    nullable: true
+              - column:
+                  name: a_zoned_date_time
+                  type: timestamp
+                  constraints:
+                    nullable: true
+#  - changeSet:
+#      id: 2
+#      author: yoann
+#      changes:
+#        - insert:
+#            tableName: simple_entity
+#            columns:
+#              - column:
+#                  name: a_string
+#                  value: myValue
+#              - column:
+#                  name: a_big_decimal
+#                  value: 888555
